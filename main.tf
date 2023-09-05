@@ -1,5 +1,5 @@
 resource "aws_cloudwatch_event_rule" "this" {
-	event_pattern       = var.details != null ? jsonencode({ detail = var.details }) : var.event_expression
+	event_pattern       = var.details != null ? jsonencode({ detail = var.details }) : var.event_pattern
 	name_prefix         = "tf-eventbridge-invoke-lambda-rule-"
 	schedule_expression = var.schedule_expression
 }

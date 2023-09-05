@@ -32,9 +32,9 @@ module "rule_schedule_expression" {
 
 # * Create a rule that can look at the AWS event itself to determine
 # * if the lambda should be invoked.
-module "rule_event_expression" {
+module "rule_event_pattern" {
 	source = "../.."
 
-	event_expression = jsonencode({ source = ["build.cloudevents.gdn"] })
+	event_pattern = jsonencode({ source = ["build.cloudevents.gdn"] })
 	lambda = { arn = module.lambda.arn }
 }

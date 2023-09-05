@@ -1,4 +1,4 @@
-variable "event_expression" {
+variable "event_pattern" {
 	default = null
 	type    = string
 }
