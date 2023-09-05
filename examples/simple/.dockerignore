@@ -1,0 +1,5 @@
+*
+
+!.dockerignore
+!dockerfile
+!index.js

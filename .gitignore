@@ -1,0 +1,6 @@
+# General
+.env
+
+# Terraform
+*terraform.tfstate*
+.terraform

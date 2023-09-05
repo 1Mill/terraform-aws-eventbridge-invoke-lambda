@@ -1,0 +1,14 @@
+# syntax=docker/dockerfile:1
+FROM public.ecr.aws/lambda/nodejs:14
+
+WORKDIR $LAMBDA_TASK_ROOT
+
+ENV NODE_ENV=production
+
+COPY . .
+
+# https://aws.amazon.com/premiumsupport/knowledge-center/lambda-deployment-package-errors/
+RUN find . -type d -exec chmod 755 {} \;
+RUN find . -type f -exec chmod 644 {} \;
+
+CMD [ "index.handler" ]
