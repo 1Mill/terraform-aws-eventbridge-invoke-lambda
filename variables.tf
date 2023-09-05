@@ -1,11 +1,11 @@
-variable "event_pattern" {
-	default = null
-	type    = string
-}
-
 variable "details" {
 	default = null
 	type    = any
+}
+
+variable "event_pattern" {
+	default = null
+	type    = string
 }
 
 variable "lambda" {
